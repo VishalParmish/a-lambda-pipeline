@@ -1,0 +1,12 @@
+1. Create a /lambda fiolder in stacks and here create a index.js file also
+2. exports.handler = async (event) => {
+     const response = {
+       statusCode: 200,
+       body: JSON.stringify('Hello Vishal'),
+     };
+     return response;
+   };
+3. Now do commands 
+    $ zip lambda.zip index.js
+    $ aws s3 cp lambda.zip s3://<bucket-name>/lambda.zip
+4. At last edit bucket name in builspec.yml from repo
